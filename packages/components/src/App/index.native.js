@@ -6,24 +6,25 @@
  * @flow
  */
 
-import React, { Component } from "react";
-import { Platform, StyleSheet, Text, View } from "react-native";
-import Screen1 from "../Screen1";
-import Screen2 from "../Screen2";
+import React, { Component } from 'react';
+import { Platform, StyleSheet, Text, View } from 'react-native';
+import Screen1 from '../Screen1';
+import Screen2 from '../Screen2';
+import Home from '../Home';
 import {
   createSwitchNavigator,
   createNavigator,
   getActiveChildNavigationOptions
-} from "@react-navigation/core";
+} from '@react-navigation/core';
 import {
   createStackNavigator,
   createAppContainer
-} from "@react-navigation/native";
+} from '@react-navigation/native';
 
 const AppNavigator = createSwitchNavigator(
   {
-    Home: Screen1,
-    Screen2
+    Home
+    // Screen2
   },
   {
     navigationOptions: ({ navigation, screenProps }) => {
@@ -46,18 +47,18 @@ export default class App extends Component<Props> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#F5FCFF"
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF'
   },
   welcome: {
     fontSize: 20,
-    textAlign: "center",
+    textAlign: 'center',
     margin: 10
   },
   instructions: {
-    textAlign: "center",
-    color: "#333333",
+    textAlign: 'center',
+    color: '#333333',
     marginBottom: 5
   }
 });
